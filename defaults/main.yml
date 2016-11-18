@@ -1,0 +1,6 @@
+---
+# defaults file for ansible-role-mysql_client
+
+_mysql_client:
+  
+

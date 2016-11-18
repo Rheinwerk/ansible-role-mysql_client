@@ -1,0 +1,19 @@
+# Galera Client Tools
+---
+- name: Setup Percona Apt Key
+  apt_key: id=1C4CBDCDCD2EFD2A keyserver=keys.gnupg.net state=present
+
+- name: Setup Percona Apt Repository
+  apt_repository: repo="{{ item }}"
+  with_items:
+    - "deb http://repo.percona.com/apt trusty main"
+    - "deb-src http://repo.percona.com/apt trusty main"
+
+- name: Pin Percona Repos for XtraDB
+  copy: src=etc/apt/preferences.d/00percona.pref dest=/etc/apt/preferences.d/00percona.pref mode=0644 owner=root group=root
+
+- name: Install Percona XtraDB client
+  apt: pkg="{{ item }}" state=present
+  with_items:
+    - percona-xtradb-cluster-client-5.7
+
