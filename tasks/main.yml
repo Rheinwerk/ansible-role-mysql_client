@@ -1,7 +1,9 @@
 # Galera Client Tools
 ---
 - name: Setup Percona Apt Key
-  apt_key: id=9334A25F8507EFA5 keyserver=keys.gnupg.net state=present
+  apt_key: id="{{ item }}" keyserver=keyserver.ubuntu.com state=present
+  with_items:
+    - 8507EFA5
 
 - name: Setup Percona Apt Repository
   apt_repository: repo="{{ item }}"
