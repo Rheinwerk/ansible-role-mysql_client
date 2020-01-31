@@ -8,8 +8,8 @@
 - name: Setup Percona Apt Repository
   apt_repository: repo="{{ item }}"
   with_items:
-    - "deb http://repo.percona.com/apt trusty main"
-    - "deb-src http://repo.percona.com/apt trusty main"
+    - "deb http://repo.percona.com/apt bionic main"
+    - "deb-src http://repo.percona.com/apt bionic main"
 
 - name: Pin Percona Repos for XtraDB
   copy: src=etc/apt/preferences.d/00percona.pref dest=/etc/apt/preferences.d/00percona.pref mode=0644 owner=root group=root
