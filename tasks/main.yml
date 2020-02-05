@@ -3,7 +3,7 @@
 - name: Setup Percona Apt Key
   apt_key: id="{{ item }}" keyserver=keyserver.ubuntu.com state=present
   with_items:
-    - 8507EFA5
+    - 4d1bb29d63d98e422b2113b19334a25f8507efa5
 
 - name: Setup Percona Apt Repository
   apt_repository: repo="{{ item }}"
