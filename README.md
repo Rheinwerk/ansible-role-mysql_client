@@ -3,7 +3,7 @@ Install Percona MySQL Client Packages
 
 This role can be used to install the Percona MySQL Client Tools.
 
-[![Build Status](https://travis-ci.org/Rheinwerk/ansible-role-mysql_client.svg?branch=master)](https://travis-ci.org/Rheinwerk/ansible-role-mysql_client)
+[![Build Status](https://github.com/Rheinwerk/ansible-role-mysql_client/actions/workflows/ci.yml/badge.svg)](https://github.com/Rheinwerk/ansible-role-mysql_client/actions/workflows/ci.yml)
 
 Requirements
 ------------
